@@ -6,7 +6,6 @@ class Validator {
   }
   
   func isArray(str: String) throws -> Bool {
-    
     var stack: Stack = Stack()
     
     for element in str {
@@ -23,12 +22,15 @@ class Validator {
       throw ArrayError.invalidValue
     }
   }
+  
   func isSeperator(letter: Character) -> Bool {
     return letter == "[" || letter == "]" || letter == ","
   }
+  
   func isQuote(letter: Character) -> Bool {
     return letter == "\'" || letter == "\""
   }
+  
   func isString(quoteArray: [Character]) -> Bool {
     return quoteArray.count == 0
   }
