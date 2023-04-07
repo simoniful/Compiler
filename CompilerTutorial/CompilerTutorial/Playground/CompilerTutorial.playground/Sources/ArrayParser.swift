@@ -45,8 +45,7 @@ public struct ArrayParser {
       
       return tokenArray
       
-    }
-    catch {
+    } catch {
       print("올바른 배열 형태가 아니네요")
       exit(0)
     }
@@ -101,15 +100,30 @@ public struct ArrayParser {
     for (index, element) in lexerArray.enumerated() {
       if index != startIdnex && index != endIdnex {
         if element.type == "LBracket" {
-          tree.add(child: TreeNode(tokens: element, degree: degree))
+          tree.add(
+            child: TreeNode(
+              tokens: element,
+              degree: degree
+            )
+          )
           tree = tree.children[tree.children.endIndex - 1]
           degree = degree + 1
         } else if element.type == "RBracket" {
           tree = tree.parent
           degree = degree-1
-          tree.add(child: TreeNode(tokens: element, degree: degree))
+          tree.add(
+            child: TreeNode(
+              tokens: element,
+              degree: degree
+            )
+          )
         } else if element.type != "comma" {
-          tree.add(child: TreeNode(tokens: element, degree: degree))
+          tree.add(
+            child: TreeNode(
+              tokens: element,
+              degree: degree
+            )
+          )
         }
       }
     }
