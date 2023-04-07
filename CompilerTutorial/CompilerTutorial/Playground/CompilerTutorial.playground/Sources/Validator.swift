@@ -1,6 +1,6 @@
 import Foundation
 
-class Validator {
+public class Validator {
   enum ArrayError: Error {
     case invalidValue
   }

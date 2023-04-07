@@ -1,6 +1,6 @@
 import Foundation
 
-class TreeNode {
+public class TreeNode {
   var tokens: ContextToken
   var children = [TreeNode]()
   var parent: TreeNode!

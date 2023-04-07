@@ -1,10 +1,10 @@
 import Foundation
 
-struct ArrayParser {
+public struct ArrayParser {
   var quoteArray = [Character]()
   let validator = Validator()
   
-  init(str: String) {
+  public init(str: String) {
     print(self.parser(str: str))
   }
   
@@ -123,5 +123,4 @@ struct ArrayParser {
     }
     print("]")
   }
-  
 }

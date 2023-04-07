@@ -1,6 +1,6 @@
 import Foundation
 
-struct ContextToken {
+public struct ContextToken {
   let type: String
   let value: String
   

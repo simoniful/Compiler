@@ -1,6 +1,6 @@
 import Foundation
 
-struct Stack {
+public struct Stack {
   private var list = [String]()
   
   func isEmpty() -> Bool {
